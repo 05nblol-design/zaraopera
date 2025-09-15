@@ -46,7 +46,8 @@ export default defineConfig({
       '@store': path.resolve(__dirname, './src/store'),
       '@assets': path.resolve(__dirname, './src/assets'),
       '@styles': path.resolve(__dirname, './src/styles')
-    }
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
   },
   server: {
     host: '0.0.0.0',

@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "zara-operacao-system",
   "builds": [
     {
       "src": "frontend/package.json",
@@ -11,22 +10,27 @@
       }
     },
     {
-      "src": "server/**/*.js",
-      "use": "@vercel/node"
+      "src": "server/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server/index.js"
-    },
     {
       "src": "/socket.io/(.*)",
       "dest": "/server/index.js"
     },
     {
+      "src": "/api/(.*)",
+      "dest": "/server/index.js"
+    },
+    {
       "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot))",
-      "dest": "/frontend/dist/$1"
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/(.*)",
@@ -35,17 +39,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "server/index.js": {
-      "maxDuration": 30,
-      "memory": 1024
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/server/index.js"
-    }
-  ]
+  }
 }
