@@ -4,53 +4,53 @@ import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Hooks personalizados
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
-import { useTheme } from '@/hooks/useTheme';
+import { useAuth } from './hooks/useAuth';
+import { useSocket } from './hooks/useSocket';
+import { useTheme } from './hooks/useTheme';
 
 // Componentes de layout
-import Layout from '@/components/layout/Layout';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import ErrorBoundary from '@/components/ui/ErrorBoundary';
-import ToastContainer from '@/components/ui/ToastContainer';
-import NotificationPopupContainer from '@/components/ui/NotificationPopupContainer';
+import Layout from './components/layout/Layout';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import ErrorBoundary from './components/ui/ErrorBoundary';
+import ToastContainer from './components/ui/ToastContainer';
+import NotificationPopupContainer from './components/ui/NotificationPopupContainer';
 
 // Páginas - Lazy loading para melhor performance
-const LoginPage = React.lazy(() => import('@/pages/Login'));
-const TestLoginPage = React.lazy(() => import('@/pages/TestLogin'));
-const DashboardPage = React.lazy(() => import('@/pages/Dashboard'));
-const OperatorMenuPage = React.lazy(() => import('@/pages/OperatorMenu'));
-const LeaderDashboardPage = React.lazy(() => import('@/pages/LeaderDashboard'));
-const ManagerDashboardPage = React.lazy(() => import('@/pages/ManagerDashboard'));
-const MachinesPage = React.lazy(() => import('@/pages/Machines'));
-const MachineNewPage = React.lazy(() => import('@/pages/MachineNew'));
-const MachineDetailPage = React.lazy(() => import('@/pages/MachineDetail'));
-const MachineOperationPage = React.lazy(() => import('@/pages/MachineOperation'));
-const ProductionOperationPage = React.lazy(() => import('@/pages/ProductionOperationPage'));
-const MachineConfigPage = React.lazy(() => import('@/pages/MachineConfig'));
-const MachineStatusPage = React.lazy(() => import('@/pages/MachineStatus'));
-const QualityTestsPage = React.lazy(() => import('@/pages/QualityTests'));
+const LoginPage = React.lazy(() => import('./pages/Login'));
+const TestLoginPage = React.lazy(() => import('./pages/TestLogin'));
+const DashboardPage = React.lazy(() => import('./pages/Dashboard'));
+const OperatorMenuPage = React.lazy(() => import('./pages/OperatorMenu'));
+const LeaderDashboardPage = React.lazy(() => import('./pages/LeaderDashboard'));
+const ManagerDashboardPage = React.lazy(() => import('./pages/ManagerDashboard'));
+const MachinesPage = React.lazy(() => import('./pages/Machines'));
+const MachineNewPage = React.lazy(() => import('./pages/MachineNew'));
+const MachineDetailPage = React.lazy(() => import('./pages/MachineDetail'));
+const MachineOperationPage = React.lazy(() => import('./pages/MachineOperation'));
+const ProductionOperationPage = React.lazy(() => import('./pages/ProductionOperationPage'));
+const MachineConfigPage = React.lazy(() => import('./pages/MachineConfig'));
+const MachineStatusPage = React.lazy(() => import('./pages/MachineStatus'));
+const QualityTestsPage = React.lazy(() => import('./pages/QualityTests'));
 const QualityTestFormPage = React.lazy(() => import('./pages/QualityTestForm'));
-const QualityTestDetailPage = React.lazy(() => import('@/pages/QualityTestDetail'));
+const QualityTestDetailPage = React.lazy(() => import('./pages/QualityTestDetail'));
 
-const QualityTestPage = React.lazy(() => import('@/pages/QualityTest'));
-const ReportsPage = React.lazy(() => import('@/pages/Reports'));
-const NotificationsPage = React.lazy(() => import('@/pages/Notifications'));
-const AdminNotificationsPage = React.lazy(() => import('@/pages/AdminNotifications'));
-const NotificationDashboardPage = React.lazy(() => import('@/pages/NotificationDashboard'));
-const SettingsPage = React.lazy(() => import('@/pages/Settings'));
-const PersonalSettingsPage = React.lazy(() => import('@/pages/PersonalSettings'));
-const TeflonPage = React.lazy(() => import('@/pages/Teflon'));
-const TeflonChangePage = React.lazy(() => import('@/pages/TeflonChange'));
-const TeflonDetailPage = React.lazy(() => import('@/pages/TeflonDetail'));
-const UsersPage = React.lazy(() => import('@/pages/Users'));
-const UserNewPage = React.lazy(() => import('@/pages/UserNew'));
-const UserDetailPage = React.lazy(() => import('@/pages/UserDetail'));
-const UserEditPage = React.lazy(() => import('@/pages/UserEdit'));
-const PermissionsPage = React.lazy(() => import('@/pages/Permissions'));
-const OperatorAssignmentPage = React.lazy(() => import('@/pages/OperatorAssignment'));
-const ShiftManagement3x3Page = React.lazy(() => import('@/pages/ShiftManagement3x3'));
-const ProfilePage = React.lazy(() => import('@/pages/Profile'));
+const QualityTestPage = React.lazy(() => import('./pages/QualityTest'));
+const ReportsPage = React.lazy(() => import('./pages/Reports'));
+const NotificationsPage = React.lazy(() => import('./pages/Notifications'));
+const AdminNotificationsPage = React.lazy(() => import('./pages/AdminNotifications'));
+const NotificationDashboardPage = React.lazy(() => import('./pages/NotificationDashboard'));
+const SettingsPage = React.lazy(() => import('./pages/Settings'));
+const PersonalSettingsPage = React.lazy(() => import('./pages/PersonalSettings'));
+const TeflonPage = React.lazy(() => import('./pages/Teflon'));
+const TeflonChangePage = React.lazy(() => import('./pages/TeflonChange'));
+const TeflonDetailPage = React.lazy(() => import('./pages/TeflonDetail'));
+const UsersPage = React.lazy(() => import('./pages/Users'));
+const UserNewPage = React.lazy(() => import('./pages/UserNew'));
+const UserDetailPage = React.lazy(() => import('./pages/UserDetail'));
+const UserEditPage = React.lazy(() => import('./pages/UserEdit'));
+const PermissionsPage = React.lazy(() => import('./pages/Permissions'));
+const OperatorAssignmentPage = React.lazy(() => import('./pages/OperatorAssignment'));
+const ShiftManagement3x3Page = React.lazy(() => import('./pages/ShiftManagement3x3'));
+const ProfilePage = React.lazy(() => import('./pages/Profile'));
 
 // Componente 404
 const NotFoundPage = () => (
