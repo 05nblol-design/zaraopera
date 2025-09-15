@@ -142,38 +142,36 @@ const strictRateLimit = rateLimit({
 // Configuração CORS empresarial
 const corsOptions = {
   origin: function (origin, callback) {
-    // Lista de domínios permitidos
+    // Lista de origens permitidas
     const allowedOrigins = [
       'http://localhost:5173',
-      'http://localhost:5174', 
+      'http://localhost:5174',
       'http://localhost:3000',
-      'https://zara-operacao.com', // Domínio de produção
-      'https://app.zara-operacao.com', // Subdomínio de produção
-      'https://www.zara-operacao.com', // WWW de produção
+      'http://localhost:3001',
       'https://ecf9e2254007.ngrok-free.app', // URL do ngrok
-      process.env.PUBLIC_SERVER_URL, // URL dinâmica do servidor público
-      process.env.CLIENT_URL, // URL dinâmica do cliente
-      process.env.FRONTEND_URL // URL dinâmica do frontend
-    ];
-    
-    // Em desenvolvimento, permitir todas as origens localhost
+      'https://understanding-sequence-prep-laden.trycloudflare.com',
+      'https://hanging-personality-counts-obtain.trycloudflare.com',
+      process.env.CLIENT_URL,
+      process.env.FRONTEND_URL,
+      process.env.CORS_ORIGIN,
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null
+    ].filter(Boolean);
+
+    // Em desenvolvimento, permitir qualquer origem
     if (process.env.NODE_ENV === 'development') {
-      if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1')) {
-        console.log(`🌐 CORS permitido (desenvolvimento):`, origin || 'sem origem');
-        return callback(null, true);
-      }
-    }
-    
-    // Permitir requests sem origin (mobile apps, Postman, etc.) apenas em desenvolvimento
-    if (!origin && process.env.NODE_ENV === 'development') {
       return callback(null, true);
     }
-    
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      console.log(`✅ CORS permitido para origem:`, origin);
+
+    // Permitir requisições sem origin (ex: mobile apps, Postman)
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    // Verificar se a origem está na lista permitida ou se é um domínio Vercel
+    if (allowedOrigins.includes(origin) || (origin && origin.includes('.vercel.app'))) {
       callback(null, true);
     } else {
-      console.log(`🚨 CORS bloqueado para origem:`, origin);
+      console.log(`🚨 Origem CORS rejeitada: ${origin}`);
       callback(new Error('Não permitido pelo CORS'));
     }
   },

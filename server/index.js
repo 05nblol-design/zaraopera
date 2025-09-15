@@ -72,12 +72,14 @@ const io = new Server(server, {
     origin: [
       process.env.CLIENT_URL || 'http://localhost:5173', 
       process.env.FRONTEND_URL || 'http://localhost:5173',
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null,
+      process.env.CORS_ORIGIN || 'http://localhost:5173',
       'http://localhost:5173', 
       'http://localhost:5174',
       'https://ecf9e2254007.ngrok-free.app', // URL do ngrok
       'https://understanding-sequence-prep-laden.trycloudflare.com',
       'https://hanging-personality-counts-obtain.trycloudflare.com'
-    ],
+    ].filter(Boolean),
     methods: ['GET', 'POST'],
     credentials: true
   }
