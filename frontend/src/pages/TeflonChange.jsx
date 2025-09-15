@@ -13,7 +13,7 @@ import {
 import { useAuth } from '../hooks/useAuth';
 import { cn } from '../lib/utils';
 import api from '../services/api';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
 
 const TeflonChange = () => {
   const { user } = useAuth();

@@ -15,16 +15,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
-import { useSocket } from '@/hooks/useSocket';
-import { useNotifications } from '@/contexts/NotificationContext';
+import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
+import { useSocket } from '../../hooks/useSocket';
+import { useNotifications } from '../../contexts/NotificationContext';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 // Constantes
-import { THEMES } from '@/constants';
+import { THEMES } from '../../constants';
 
 const Header = ({ 
   onMenuClick, 

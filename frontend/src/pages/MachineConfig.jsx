@@ -15,12 +15,12 @@ import {
   PlayIcon,
   StopIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import { cn } from '@/lib/utils';
-import { machineService } from '@/services/api';
-import ProductionTestAlertManager from '@/components/ProductionTestAlertManager';
+import { useAuth } from '../hooks/useAuth';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import { cn } from '../lib/utils';
+import { machineService } from '../services/api';
+import ProductionTestAlertManager from '../components/ProductionTestAlertManager';
 
 function MachineConfig() {
   console.log('MachineConfig component loaded!');

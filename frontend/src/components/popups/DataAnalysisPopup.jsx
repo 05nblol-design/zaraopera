@@ -11,10 +11,10 @@ import {
   CalendarDaysIcon,
   FunnelIcon
 } from '@heroicons/react/24/outline';
-import Modal from '@/components/ui/Modal';
-import { cn, formatNumber, formatDateTime } from '@/lib/utils';
-import { useSocket } from '@/hooks/useSocket';
-import useMachineStatus from '@/hooks/useMachineStatus';
+import Modal from '../ui/Modal';
+import { cn, formatNumber, formatDateTime } from '../../lib/utils';
+import { useSocket } from '../../hooks/useSocket';
+import useMachineStatus from '../../hooks/useMachineStatus';
 
 const DataAnalysisPopup = ({ isOpen, onClose }) => {
   const [selectedPeriod, setSelectedPeriod] = useState('today');

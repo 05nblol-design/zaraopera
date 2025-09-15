@@ -18,17 +18,17 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
-import { useSocket } from '@/hooks/useSocket';
-import useMachineStatus from '@/hooks/useMachineStatus';
-import { useNotifications } from '@/contexts/NotificationContext';
-import { useRealTimeProduction } from '@/hooks/useRealTimeProduction';
+import { useAuth } from '../hooks/useAuth';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
+import { useSocket } from '../hooks/useSocket';
+import useMachineStatus from '../hooks/useMachineStatus';
+import { useNotifications } from '../contexts/NotificationContext';
+import { useRealTimeProduction } from '../hooks/useRealTimeProduction';
 
 // Utilitários
-import { cn, formatNumber, formatDateTime } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
-import api from '@/services/api';
+import { cn, formatNumber, formatDateTime } from '../lib/utils';
+import { ROUTES } from '../config/routes';
+import api from '../services/api';
 
 // Componentes
 // ProductionPopup removido - agora aparece apenas na página de detalhes das máquinas

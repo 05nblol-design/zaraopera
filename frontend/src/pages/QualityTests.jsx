@@ -22,12 +22,12 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
+import { useAuth } from '../hooks/useAuth';
+import { useSocket } from '../hooks/useSocket';
 
 // Utilitários
-import { cn, formatDateTime, formatNumber } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
+import { cn, formatDateTime, formatNumber } from '../lib/utils';
+import { ROUTES } from '../config/routes';
 
 const QualityTests = () => {
   const location = useLocation();

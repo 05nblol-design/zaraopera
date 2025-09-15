@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/Badge';
-import { Alert } from '@/components/ui/alert';
-import { ErrorMessage } from '@/components/ui/ErrorMessage';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { useAuth } from '../hooks/useAuth';
+import { useSocket } from '../hooks/useSocket';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/Badge';
+import { Alert } from '../components/ui/alert';
+import { ErrorMessage } from '../components/ui/ErrorMessage';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 import { Play, Pause, Square, AlertTriangle, CheckCircle } from 'lucide-react';
 
 const ProductionOperation = () => {

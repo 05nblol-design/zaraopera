@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AlertTriangle, Package, Clock, CheckCircle, X, Play, BarChart3, Zap, TrendingUp } from 'lucide-react';
 import { toast } from 'react-hot-toast';
-import soundService from '@/services/soundService';
+import soundService from '../../services/soundService';
 
 const ProductionTestPopup = ({ 
   isOpen, 

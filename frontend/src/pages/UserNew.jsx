@@ -9,9 +9,9 @@ import {
   EyeIcon,
   EyeSlashIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import { cn } from '@/lib/utils';
-import api from '@/services/api';
+import { useAuth } from '../hooks/useAuth';
+import { cn } from '../lib/utils';
+import api from '../services/api';
 
 const UserNew = () => {
   const navigate = useNavigate();

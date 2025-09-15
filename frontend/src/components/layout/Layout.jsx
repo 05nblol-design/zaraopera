@@ -14,12 +14,12 @@ import QuickActions from './QuickActions';
 import NotificationCenter from '../NotificationCenter';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
-import { useSocket } from '@/hooks/useSocket';
+import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
+import { useSocket } from '../../hooks/useSocket';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);

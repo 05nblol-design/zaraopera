@@ -13,15 +13,15 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
-import { useSocket } from '@/hooks/useSocket';
+import { useAuth } from '../hooks/useAuth';
+import { useTheme } from '../hooks/useTheme';
+import { useSocket } from '../hooks/useSocket';
 
 // Components
-import SoundSettings from '@/components/settings/SoundSettings';
+import SoundSettings from '../components/settings/SoundSettings';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 
 const PersonalSettings = () => {
   const [activeTab, setActiveTab] = useState('profile');

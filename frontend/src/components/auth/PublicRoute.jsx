@@ -2,10 +2,10 @@ import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 
 // Utilitários
-import { ROUTES } from '@/config/routes';
+import { ROUTES } from '../../config/routes';
 
 // Componente de carregamento
 const LoadingSpinner = () => (

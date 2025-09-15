@@ -17,18 +17,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import useMachineStatus from '@/hooks/useMachineStatus';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
+import { useAuth } from '../hooks/useAuth';
+import useMachineStatus from '../hooks/useMachineStatus';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
 
 // Componentes
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import ProductionSpeedControl from '@/components/ProductionSpeedControl';
-import ProductionMetrics from '@/components/ProductionMetrics';
-import MachineOperationControls from '@/components/MachineOperationControls';
-import ProductionPopupManager from '@/components/ProductionPopupManager';
-import { cn } from '@/lib/utils';
-import { machineService } from '@/services/api';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import ProductionSpeedControl from '../components/ProductionSpeedControl';
+import ProductionMetrics from '../components/ProductionMetrics';
+import MachineOperationControls from '../components/MachineOperationControls';
+import ProductionPopupManager from '../components/ProductionPopupManager';
+import { cn } from '../lib/utils';
+import { machineService } from '../services/api';
 
 const MachineDetail = () => {
   const { id } = useParams();

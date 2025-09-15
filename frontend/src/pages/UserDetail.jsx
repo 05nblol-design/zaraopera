@@ -19,11 +19,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 
 // Componentes
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import { cn } from '@/lib/utils';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import { cn } from '../lib/utils';
 
 const UserDetail = () => {
   const { id } = useParams();

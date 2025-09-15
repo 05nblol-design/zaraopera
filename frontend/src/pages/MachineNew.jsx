@@ -10,11 +10,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 
 // Utilitários
-import { cn } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
+import { cn } from '../lib/utils';
+import { ROUTES } from '../config/routes';
 
 const MachineNew = () => {
   const navigate = useNavigate();

@@ -7,8 +7,8 @@ import {
   ExclamationTriangleIcon,
   ArrowPathIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import { useRealTimeProduction } from '@/hooks/useRealTimeProduction';
+import { useAuth } from '../hooks/useAuth';
+import { useRealTimeProduction } from '../hooks/useRealTimeProduction';
 import { toast } from 'react-hot-toast';
 
 const ProductionMetrics = ({ machineId, machine, refreshTrigger = 0 }) => {

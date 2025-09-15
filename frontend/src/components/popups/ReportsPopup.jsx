@@ -14,10 +14,10 @@ import {
   UserGroupIcon,
   EyeIcon
 } from '@heroicons/react/24/outline';
-import Modal from '@/components/ui/Modal';
-import { cn, formatDateTime, formatNumber } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
+import Modal from '../ui/Modal';
+import { cn, formatDateTime, formatNumber } from '../../lib/utils';
+import { useAuth } from '../../hooks/useAuth';
+import { useSocket } from '../../hooks/useSocket';
 
 const ReportsPopup = ({ isOpen, onClose }) => {
   const [selectedReport, setSelectedReport] = useState('production');

@@ -1,5 +1,5 @@
 import React from 'react';
-import NotificationHistory from '@/components/NotificationHistory';
+import NotificationHistory from '../components/NotificationHistory';
 
 const Notifications = () => {
    return <NotificationHistory />;

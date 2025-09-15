@@ -23,19 +23,19 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
-import useMachinePermissions from '@/hooks/useMachinePermissions';
-import { useMachineStatus } from '@/hooks/useMachineStatus';
+import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
+import useMachinePermissions from '../../hooks/useMachinePermissions';
+import { useMachineStatus } from '../../hooks/useMachineStatus';
 
 // Configurações
-import { getNavigationItems } from '@/config/routes';
+import { getNavigationItems } from '../../config/routes';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 // Logo
-import LogoZ from '@/assets/icons/logo-z.svg?react';
+import LogoZ from '../../assets/icons/logo-z.svg?react';
 
 
 // Mapeamento de ícones

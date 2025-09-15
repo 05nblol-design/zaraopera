@@ -28,7 +28,7 @@ import api from '../services/api';
 import toast from 'react-hot-toast';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
 
 // Registrar componentes do Chart.js
 ChartJS.register(

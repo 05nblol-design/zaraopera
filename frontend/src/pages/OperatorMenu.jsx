@@ -17,15 +17,15 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import useMachineStatus from '@/hooks/useMachineStatus';
-import { useNotifications } from '@/contexts/NotificationContext';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
+import { useAuth } from '../hooks/useAuth';
+import useMachineStatus from '../hooks/useMachineStatus';
+import { useNotifications } from '../contexts/NotificationContext';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
 
 // Utilitários
-import { cn, formatNumber, formatDateTime } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
-import api from '@/services/api';
+import { cn, formatNumber, formatDateTime } from '../lib/utils';
+import { ROUTES } from '../config/routes';
+import api from '../services/api';
 
 const OperatorMenu = () => {
   const { user } = useAuth();

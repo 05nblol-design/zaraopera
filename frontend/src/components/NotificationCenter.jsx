@@ -9,8 +9,8 @@ import {
   CheckCircleIcon, 
   XCircleIcon 
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import api from '@/services/api';
+import { useAuth } from '../hooks/useAuth';
+import api from '../services/api';
 
 const NotificationCenter = ({ onClose }) => {
   const { user, token } = useAuth();

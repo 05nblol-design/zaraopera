@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 
 // Ícones
 import {
@@ -26,11 +26,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Serviços
-import api from '@/services/api';
+import api from '../services/api';
 
 // Utilitários
-import { cn } from '@/lib/utils';
-import { formatDate, formatDateTime } from "@/lib/utils";
+import { cn } from '../lib/utils';
+import { formatDate, formatDateTime } from "../lib/utils";
 
 const TeflonDetail = () => {
   const { id } = useParams();

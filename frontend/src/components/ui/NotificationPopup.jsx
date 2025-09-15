@@ -10,7 +10,7 @@ import {
   BeakerIcon,
   WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 

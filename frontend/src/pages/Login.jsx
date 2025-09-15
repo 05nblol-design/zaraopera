@@ -11,12 +11,12 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
+import { useAuth } from '../hooks/useAuth';
+import { useTheme } from '../hooks/useTheme';
 
 // Utilitários
-import { cn, isValidEmail } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
+import { cn, isValidEmail } from '../lib/utils';
+import { ROUTES } from '../config/routes';
 
 const Login = () => {
   const [formData, setFormData] = useState({

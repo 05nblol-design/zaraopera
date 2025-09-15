@@ -17,16 +17,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
+import { useAuth } from '../../hooks/useAuth';
+import { useSocket } from '../../hooks/useSocket';
 
 // Utilitários
-import { cn } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
+import { cn } from '../../lib/utils';
+import { ROUTES } from '../../config/routes';
 
 // Popups
-import DataAnalysisPopup from '@/components/popups/DataAnalysisPopup';
-import ReportsPopup from '@/components/popups/ReportsPopup';
+import DataAnalysisPopup from '../popups/DataAnalysisPopup';
+import ReportsPopup from '../popups/ReportsPopup';
 
 const QuickActions = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
 import { UserIcon, CogIcon, CheckIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { cn } from '@/lib/utils';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import api from '@/services/api';
+import { cn } from '../lib/utils';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import api from '../services/api';
 
 const OperatorAssignment = () => {
   const { user } = useAuth();

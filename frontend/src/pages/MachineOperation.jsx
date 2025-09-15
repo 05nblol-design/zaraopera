@@ -11,24 +11,24 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useMachineStatus } from '@/hooks/useMachineStatus';
-import { useSocket } from '@/hooks/useSocket';
-import useMachinePermissions from '@/hooks/useMachinePermissions';
+import { useAuth } from '../hooks/useAuth';
+import { useMachineStatus } from '../hooks/useMachineStatus';
+import { useSocket } from '../hooks/useSocket';
+import useMachinePermissions from '../hooks/useMachinePermissions';
 
 // Componentes
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import ErrorMessage from '@/components/ui/ErrorMessage';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/Badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import ErrorMessage from '../components/ui/ErrorMessage';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Badge } from '../components/ui/Badge';
+import { Alert, AlertDescription } from '../components/ui/alert';
 
 // Serviços
-import { machineService } from '@/services/api';
+import { machineService } from '../services/api';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 

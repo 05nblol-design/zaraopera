@@ -12,9 +12,9 @@ import {
   CameraIcon,
   ShieldCheckIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import { cn } from '@/lib/utils';
+import { useAuth } from '../hooks/useAuth';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
+import { cn } from '../lib/utils';
 
 const Profile = () => {
   const { user, updateProfile, changePassword } = useAuth();

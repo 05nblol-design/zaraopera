@@ -31,16 +31,16 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useTheme } from '@/hooks/useTheme';
-import { useSocket } from '@/hooks/useSocket';
-import soundService from '@/services/soundService';
+import { useAuth } from '../hooks/useAuth';
+import { useTheme } from '../hooks/useTheme';
+import { useSocket } from '../hooks/useSocket';
+import soundService from '../services/soundService';
 
 // Components
-import SoundSettings from '@/components/settings/SoundSettings';
+import SoundSettings from '../components/settings/SoundSettings';
 
 // Utilitários
-import { cn, formatDateTime } from '@/lib/utils';
+import { cn, formatDateTime } from '../lib/utils';
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState('profile');

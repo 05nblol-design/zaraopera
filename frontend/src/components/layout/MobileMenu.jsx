@@ -19,10 +19,10 @@ import {
   WrenchScrewdriverIcon,
   DocumentTextIcon
 } from '@heroicons/react/24/outline';
-import { useAuth } from '@/hooks/useAuth';
-import useMachinePermissions from '@/hooks/useMachinePermissions';
-import { getNavigationItems } from '@/config/routes';
-import { cn } from '@/lib/utils';
+import { useAuth } from '../../hooks/useAuth';
+import useMachinePermissions from '../../hooks/useMachinePermissions';
+import { getNavigationItems } from '../../config/routes';
+import { cn } from '../../lib/utils';
 
 const iconMap = {
   HomeIcon,

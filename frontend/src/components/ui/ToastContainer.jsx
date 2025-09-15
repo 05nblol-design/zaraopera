@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Toast from './Toast';
-import { useSocket } from '@/hooks/useSocket';
-import { useAuth } from '@/hooks/useAuth';
-import { useSoundSettings } from '@/hooks/useSoundSettings';
+import { useSocket } from '../../hooks/useSocket';
+import { useAuth } from '../../hooks/useAuth';
+import { useSoundSettings } from '../../hooks/useSoundSettings';
 
 const ToastContainer = () => {
   const [toasts, setToasts] = useState([]);

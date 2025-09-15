@@ -5,8 +5,8 @@ import {
   PlayIcon,
   Cog6ToothIcon
 } from '@heroicons/react/24/outline';
-import { useSoundSettings } from '@/hooks/useSoundSettings';
-import { cn } from '@/lib/utils';
+import { useSoundSettings } from '../../hooks/useSoundSettings';
+import { cn } from '../../lib/utils';
 
 const SoundSettings = () => {
   const {

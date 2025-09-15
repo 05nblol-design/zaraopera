@@ -20,9 +20,9 @@ import {
   UserCheck,
   Cog
 } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { cn } from '@/lib/utils';
-import api from '@/services/api';
+import { useAuth } from '../hooks/useAuth';
+import { cn } from '../lib/utils';
+import api from '../services/api';
 
 const Permissions = () => {
   const { user } = useAuth();

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { PlayIcon, StopIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
-import useMachineStatus from '@/hooks/useMachineStatus';
-import { cn } from '@/lib/utils';
+import { useAuth } from '../hooks/useAuth';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
+import useMachineStatus from '../hooks/useMachineStatus';
+import { cn } from '../lib/utils';
 
 const MachineOperationControls = ({ machine, onOperationChange }) => {
   const { user } = useAuth();

@@ -24,18 +24,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
-import { useSocket } from '@/hooks/useSocket';
-import { useRealTimeProduction } from '@/hooks/useRealTimeProduction';
-import useMachineStatus from '@/hooks/useMachineStatus';
+import { useAuth } from '../hooks/useAuth';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
+import { useSocket } from '../hooks/useSocket';
+import { useRealTimeProduction } from '../hooks/useRealTimeProduction';
+import useMachineStatus from '../hooks/useMachineStatus';
 
 // Utilitários
-import { cn, formatDateTime, formatNumber, formatCurrency } from '@/lib/utils';
+import { cn, formatDateTime, formatNumber, formatCurrency } from '../lib/utils';
 
 // Popups
-import DataAnalysisPopup from '@/components/popups/DataAnalysisPopup';
-import ReportsPopup from '@/components/popups/ReportsPopup';
+import DataAnalysisPopup from '../components/popups/DataAnalysisPopup';
+import ReportsPopup from '../components/popups/ReportsPopup';
 
 const Reports = () => {
   const [selectedReport, setSelectedReport] = useState('production');

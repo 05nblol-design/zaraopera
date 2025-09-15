@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductionTestPopup from './popups/ProductionTestPopup';
-import useProductionTestAlert from '@/hooks/useProductionTestAlert';
+import useProductionTestAlert from '../hooks/useProductionTestAlert';
 
 const ProductionTestAlert = ({ machineId, isOperating }) => {
   const {

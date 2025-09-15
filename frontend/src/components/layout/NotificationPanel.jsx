@@ -13,11 +13,11 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useNotifications } from '@/contexts/NotificationContext';
-import { useAuth } from '@/hooks/useAuth';
+import { useNotifications } from '../../contexts/NotificationContext';
+import { useAuth } from '../../hooks/useAuth';
 
 // Utilitários
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 

@@ -19,18 +19,18 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
-import { useSocket } from '@/hooks/useSocket';
-import useMachineStatus from '@/hooks/useMachineStatus';
-import { useRealTimeProduction } from '@/hooks/useRealTimeProduction';
-import { useMachinePermissions } from '@/hooks/useMachinePermissions';
+import { useAuth } from '../hooks/useAuth';
+import { useSocket } from '../hooks/useSocket';
+import useMachineStatus from '../hooks/useMachineStatus';
+import { useRealTimeProduction } from '../hooks/useRealTimeProduction';
+import { useMachinePermissions } from '../hooks/useMachinePermissions';
 
 // Services
-import { machineService } from '@/services/api';
+import { machineService } from '../services/api';
 
 // Utilitários
-import { cn, formatDateTime, formatNumber } from '@/lib/utils';
-import { ROUTES } from '@/config/routes';
+import { cn, formatDateTime, formatNumber } from '../lib/utils';
+import { ROUTES } from '../config/routes';
 
 const Machines = () => {
   const [searchTerm, setSearchTerm] = useState('');

@@ -8,12 +8,12 @@ import {
 } from '@heroicons/react/24/outline';
 
 // Hooks
-import { useAuth } from '@/hooks/useAuth';
+import { useAuth } from '../../hooks/useAuth';
 
 // Utilitários
-import { ROUTES } from '@/config/routes';
-import { hasPermission } from '@/utils';
-import { cn } from '@/lib/utils';
+import { ROUTES } from '../../config/routes';
+import { hasPermission } from '../../utils';
+import { cn } from '../../lib/utils';
 
 // Componente de carregamento
 const LoadingSpinner = () => (
