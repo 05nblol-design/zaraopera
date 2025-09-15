@@ -1,0 +1,37 @@
+{
+  "name": "zara-operacao-system",
+  "version": "1.0.1",
+  "description": "Sistema Operacional ZARA - Controle de Qualidade e Operações",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run frontend:dev\"",
+    "server:dev": "cd server && npm run dev",
+    "frontend:dev": "cd frontend && npm run dev",
+    "build": "npm run build:frontend && npm run build:server",
+    "build:server": "cd server && npm install",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "start": "cd server && npm start",
+    "test": "cd server && npm test",
+    "install:all": "npm install && cd server && npm install && cd ../frontend && npm install",
+    "deploy:prepare": "git add . && git commit -m 'Prepare for Railway deployment'"
+  },
+  "keywords": [
+    "zara",
+    "operacao",
+    "qualidade",
+    "nodejs",
+    "react",
+    "postgresql",
+    "redis",
+    "railway"
+  ],
+  "author": "ZARA Operations Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}

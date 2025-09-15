@@ -1,0 +1,40 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "npm start"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Backend service
+[[services]]
+name = "backend"
+root = "server"
+
+[services.build]
+builder = "NIXPACKS"
+buildCommand = "npm install"
+
+[services.deploy]
+startCommand = "node index.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Frontend service
+[[services]]
+name = "frontend"
+root = "frontend"
+
+[services.build]
+builder = "NIXPACKS"
+buildCommand = "npm install && npm run build"
+
+[services.deploy]
+startCommand = "npm run preview"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Environment variables
+[env]
+NODE_ENV = "production"
+PORT = "$PORT"
