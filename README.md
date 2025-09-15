@@ -2,23 +2,24 @@
 
 Sistema completo de gestão operacional com React frontend e Node.js backend.
 
-## 🚀 Deploy no Railway
+## 🚀 Deploy para Produção (Railway)
 
-Este projeto está configurado para deploy automático no Railway.
+### Opção 1: Script Automatizado (Recomendado)
+```powershell
+# Execute o script PowerShell
+.\railway-deploy.ps1
+```
 
-### Pré-requisitos
+### Opção 2: Script Bash
+```bash
+# Execute o script de deploy
+./deploy.sh
+```
 
-1. Conta no [Railway](https://railway.app)
-2. Repositório no GitHub
-3. Banco de dados PostgreSQL (Railway fornece automaticamente)
-
-### Passos para Deploy
+### Configuração Manual
 
 #### 1. **Preparar o Repositório GitHub**
 ```bash
-# Execute o script de deploy (recomendado)
-./deploy.sh
-
 # OU manualmente:
 git init
 git add .
@@ -34,6 +35,8 @@ git push -u origin main
 3. Selecione **"Deploy from GitHub repo"**
 4. Escolha o repositório `zara-operacao-system`
 5. Railway detectará automaticamente o `railway.toml`
+
+📖 **Para instruções detalhadas, consulte: [DEPLOY_GUIDE.md](./DEPLOY_GUIDE.md)**
 
 #### 3. **Adicionar Serviços de Banco de Dados**
 1. No dashboard do projeto, clique em **"+ New"**
